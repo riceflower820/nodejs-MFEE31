@@ -1,5 +1,3 @@
-
-let job=[]
 let doWork = function (job, timer, cb) {
     setTimeout(() => {
         let now = new Date();
