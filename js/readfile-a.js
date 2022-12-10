@@ -28,11 +28,22 @@ let p = new Promise((resolve, reject) => {
 // //函式名稱() -> 呼叫
 // doJob();
 
-//IIEF
-//(()=>{})()  ->最後一個() 為呼叫函式
+
+/-----------IIEF------------/
+
+//let test = function() {};
+//test()
+//----上下一樣------
+//let test = () => {};
+//test();
+
+//function test(a, b){};   test();  -> 呼叫一般寫法
+//(function test(a, b){})(); -> 立即呼叫
+//((a, b) => {})() ->立即呼叫的縮寫 -> 最後一個() 就是上上一條的test()
 (async ()=>{
     try{
-        let data = await p
+        let data = await p 
+        //回去上面 console.log抓resolve(data) data 是test.txt的內容
         console.log('用 await 拿到的結果', data)
     }catch(e){
         console.log('catch 到的錯誤', e)
