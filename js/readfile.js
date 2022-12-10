@@ -13,14 +13,17 @@ const fs = require('fs');
 // });
 
 let p = new Promise((resolve, reject) => {
-    fs.readFile('test.txt', 'utf-8', (err, data) =>{
-        resolve(data)
-        //reject('失敗了')
+    fs.readFile('test123.txt', 'utf-8', (err, data) =>{
+        if(err){
+            reject(err)
+        }else{
+            resolve(data)
+        }
     })
 })
 
 p.then((data) => {
     console.log('成功讀到資料:', data)
 }).catch((error) => {
-    console.log('這裡是 error', data)
+    console.log('這裡是 error', error)
 })
