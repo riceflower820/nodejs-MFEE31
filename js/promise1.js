@@ -13,7 +13,7 @@ let doWorkPromise = function (job, timer) {
         //2.執行非同步工作
         setTimeout(() => {
             let now = new Date();
-            cb(null, `完成工作 ${job} at ${now.toISOString()}`);
+            resolve(`完成工作 ${job} at ${now.toISOString()}`);
         }, timer);
     });
 };
