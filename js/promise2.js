@@ -23,6 +23,9 @@ console.log(`工作開始 at ${now.toISOString()}`);
 //刷牙 -> 吃早餐 -> 寫功課
 let brushPromise = doWorkPromise('刷牙', 3000);
 //promise chain (鏈接)
+// promise hell
+// 如果刷牙的結果是沒有牙齒痛 -> 就可以吃早餐 -> 吃完早餐再寫功課
+// 如果刷牙的結果是牙齒痛 -> 不能吃早餐、直接寫功課
 brushPromise
     .then((data) => {
         console.log('brushPromise', data);
