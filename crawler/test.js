@@ -1,4 +1,5 @@
 const mysql2 = require('mysql2/promise');
+require('dotenv').config();
 
 
 (async()=>{
