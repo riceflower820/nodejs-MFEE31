@@ -32,6 +32,9 @@ const moment = require('moment/moment');
 })();
 
 
+
+
+
 //-------------不是fs內建的寫法----------------
 // let p = new Promise((resolve, reject) => {
 //     fs.readFile('stock.txt', 'utf-8', (err, data) =>{
