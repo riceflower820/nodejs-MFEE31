@@ -7,8 +7,10 @@
 const axios = require('axios');
 const fs = require('fs/promises');
 const moment = require('moment/moment');
+const mysql2 = require('mysql');
 // http://54.71.133.152:3000/stocks?stockNo=2618&date=202211
 //2618, 2330, 2412
+
 
 
 
@@ -30,15 +32,3 @@ const moment = require('moment/moment');
     console.error(e);
   }
 })();
-
-
-//-------------不是fs內建的寫法----------------
-// let p = new Promise((resolve, reject) => {
-//     fs.readFile('stock.txt', 'utf-8', (err, data) =>{
-//         if(err){
-//             reject(err)
-//         }else{
-//             resolve(data)
-//         }
-//     })
-// });
